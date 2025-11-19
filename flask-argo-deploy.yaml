@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-argo-deploy
+  namespace: flask-demo
+
+spec:
+  selector:
+    matchLabels:
+      app: flask-argo-pod
+  template:
+    metadata:
+      labels:
+        app: flask-argo-pod
+    spec:
+      containers:
+        - name: flask-argo
+          image: dockerwithsaurabh/argo-flask:latest
+          ports:
+            - containerPort: 5000    
