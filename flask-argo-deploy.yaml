@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: flask-argo
-          image: dockerwithsaurabh/argo-flask:latest
+          image: dockerwithsaurabh/argo-flask:v2
           ports:
             - containerPort: 5000    
